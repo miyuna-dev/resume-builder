@@ -1,0 +1,102 @@
+.header {
+   &.container {
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+      width: 100%;
+      padding: 6rem 30px 2rem 30px;
+      background-color: $light-bg;
+      transition: $transition-slow;
+
+      .left {
+         padding-top: 2.5rem;
+         .heading {
+            padding-top: 1rem;
+            margin: 0 auto;
+            max-width: 500px;
+            color: $dark;
+            font-size: 3rem;
+            font-weight: bold;
+            line-height: 4.1rem;
+            letter-spacing: 1px;
+            text-shadow: 1px 0.1rem $light-blue;
+            transition: $transition-slow;
+            
+            span {
+               background-clip: text;
+               background-image: linear-gradient(to right, $primary, $accent, $accent, $primary);
+               color: transparent;
+               text-shadow: none;
+            }
+            @media screen and (max-width: 986px) {
+               max-width: 300px;
+               font-size: 2rem;
+               line-height: 2rem;
+               gap: 2rem;
+            }
+            @media screen and (max-width: 680px) {
+               max-width: 360px;
+               font-size: 1.6rem;
+               line-height: 2rem;
+            }
+         }
+      }
+
+      
+      .right {
+         img {
+            transition: $transition-slow;
+         }
+         @media screen and (min-width: 986px) {
+            img {
+               width: 440px;
+            }
+         }
+      }
+
+      @media screen and (max-width: 680px) {
+         flex-direction: column-reverse;
+         padding-bottom: 5rem;
+      }
+      
+   }
+}
+
+.body {
+   &.container {
+      height: 35vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      place-content: center;
+      text-align: center;
+      margin: 0 auto;
+
+         .heading {
+            color: $light;
+            background-color: $blue;
+            text-transform: uppercase;
+            text-shadow: 0 1px 1px $light-blue;
+            padding: 0.8rem 3.3rem;
+            font-weight: 500;
+            font-size: 1.7rem;
+            border-radius: 6px;
+            transition: $transition-slow;
+            cursor: pointer;
+            border: 2px solid transparent;
+            
+            &:hover {
+               color: $primary;
+               background-color: rgb($light-blue, 0.3);
+               border: 2px solid $primary;
+            }
+      }
+      
+      @media screen and (max-width: 680px) {
+         height: 30vh;
+         .heading {
+            font-size: 1.4rem;
+         }
+      }
+   }
+}

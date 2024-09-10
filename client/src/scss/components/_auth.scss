@@ -1,0 +1,143 @@
+#register,
+#login {
+   .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 8rem;
+      font-size: 1rem;
+      
+      h1 {
+         background-clip: text;
+         background-image: linear-gradient(to right, $primary, $accent, $accent, $primary);
+         color: transparent;
+         text-shadow: 12px 12px 12px $light;
+         margin-bottom: 1.4rem;
+         transition: $transition-slow;
+
+         @media screen and (max-width: 984px) {
+            font-size: 1.8rem;
+         }
+      }
+
+      .alert-danger {
+         color: rgb(226, 85, 85);
+         font-size: 0.9rem;
+         font-weight: 500;
+      }           
+
+      .form {
+         z-index: 6;
+         top: 20px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         font-size: 1.2rem;
+         text-align: center;
+         gap: 1rem;
+         margin: 1rem 0 2rem 0;
+
+         .form-group {
+            .form-input {
+               background: rgb($light-blue, 0.6);
+               border: 2px solid transparent;
+               text-align: center;
+               font-size: 1rem;
+               padding: 0.6rem 2rem;
+               border-radius: 4px;
+               caret-color: $blue;
+
+               &::placeholder {
+                  color: $gray;
+               }
+            } 
+
+            .error {
+               font-size: 0.9rem;
+               font-weight: 500;
+               color: rgb(226, 85, 85);
+            }
+         }
+         
+         .btn {
+            color: $light;
+            background-color: $blue;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: $transition-slow;
+            cursor: pointer;
+
+            &:hover,
+            &:active {
+               transform: translateY(-4px);
+            }
+         }
+      }
+   }
+
+   .account {
+      z-index: 6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      a {
+         font-weight: 500;
+         transition: $transition-slow;
+         padding: 0.1rem 0.6rem;
+
+         &:hover {
+            color: $light;
+            background: $blue;
+            border-radius: 4px;
+         }
+      }
+   }
+
+   .infos {
+
+         img {
+         position: absolute;
+         top: 650px;
+         left: 0;
+         margin: 0 auto;
+         z-index: 2;
+         opacity: 90%;
+         height: 288px;
+         transition: $transition-slow;
+         
+         @media screen and (max-width: 984px) {
+            top: 700px;
+            left: 0;
+            height: 222px;
+         }
+      }
+   }
+
+   img {
+      position: absolute;
+      top: 600px;
+      right: 0;
+      z-index: 2;
+      opacity: 90%;
+      height: 320px;
+      transition: $transition-slow;
+      
+      @media screen and (max-width: 984px) {
+         top: 740px;
+         height: 200px;
+
+      }
+   }
+}
+
+.login {
+   .container {
+      margin-top: 4rem;
+   }
+}
